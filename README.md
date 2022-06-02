@@ -4,6 +4,21 @@
 
 ### 半角スペース区切りに入力を配列に分解して格納
 
+- 固定長
+
+```python
+x, y, z = map(int, input().split())
+```
+
+- 可変長
+
+```python
+a = list(map(int, input().split())) # 3 11 18 25 40 58 69 81 88 99
+
+print(a)
+# [3, 11, 18, 25, 40, 58, 69, 81, 88, 99]
+```
+
 
 ## 標準出力
 
@@ -53,6 +68,17 @@ print(data)
 ```
 
 ### 指定の値で埋めた2次元配列の作成
+
+- 隣接リスト
+
+```python
+data = [[] * 3 for i in range(5)]
+
+print(data)
+# [[], [], [], [], []]
+```
+
+- 隣接行列
 
 ```python
 data = [[10] * 3 for i in range(5)]
