@@ -106,3 +106,17 @@ list.sort(reverse=True)
 print(list)
 # [5, 4, 3, 2, 1]
 ```
+
+## 文字列
+
+### 特定の文字列の出現回数を数える
+
+```python
+s = 'aAaAAbAccdd'
+
+print(s.count('A'))
+# 4
+
+print(s.count('Ac'))
+# 1
+```
