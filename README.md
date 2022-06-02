@@ -86,3 +86,23 @@ data = [[10] * 3 for i in range(5)]
 print(data)
 # [[10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10]]
 ```
+
+### リスト内を昇順
+
+```python
+list = [3, 1, 4, 5, 2]
+list.sort() # sort()は返り値=None
+
+print(list)
+# [1, 2, 3, 4, 5]
+```
+
+### リスト内を降順
+
+```python
+list = [3, 1, 4, 5, 2]
+list.sort(reverse=True)
+
+print(list)
+# [5, 4, 3, 2, 1]
+```
