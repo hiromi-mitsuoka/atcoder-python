@@ -135,3 +135,15 @@ print(s.count('A'))
 print(s.count('Ac'))
 # 1
 ```
+
+### 任意の文字列を含むか確認
+
+```python
+test = "test user"
+
+print("te" in test)
+# True
+
+print("password" in test)
+# False
+```
