@@ -111,6 +111,21 @@ print(list)
 
 ### 特定の文字列の出現回数を数える
 
+- count()より，Counterの方が高速
+
+```python
+from collections import Counter
+
+test = "test user, test password"
+counter = Counter(test)
+
+print(counter)
+# Counter({'s': 5, 't': 4, 'e': 3, ' ': 3, 'r': 2, 'u': 1, ',': 1, 'p': 1, 'a': 1, 'w': 1, 'o': 1, 'd': 1})
+
+print(counter["t"])
+# 4
+```
+
 ```python
 s = 'aAaAAbAccdd'
 
