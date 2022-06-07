@@ -119,6 +119,22 @@ print(s1 & s2)  #=> {3, 4}
 
 - https://maku77.github.io/python/list/overlapped.html
 
+### 多次元配列をソートする（複数キー可能）
+
+```python
+data = [['きゅうり',1,4],['いちご',2,6],['にんじん',2,1],['とうふ',1,0]]
+
+sorted_data = sorted(data, key=lambda x:(x[1], x[2])) # 昇順
+print(sorted_data)
+# [['とうふ', 1, 0], ['きゅうり', 1, 4], ['にんじん', 2, 1], ['いちご', 2, 6]]
+
+sorted_data = sorted(data, key=lambda x:(x[1], x[2]), reverse=True) # 降順
+print(sorted_data)
+# [['いちご', 2, 6], ['にんじん', 2, 1], ['きゅうり', 1, 4], ['とうふ', 1, 0]]
+```
+
+- https://qiita.com/t_kanno/items/13dd226e70d080159d97
+
 ## 文字列
 
 ### 特定の文字列の出現回数を数える
