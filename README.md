@@ -178,6 +178,14 @@ print("password" in test)
 
 ## 整数
 
+### 桁数を確認する
+
+```python
+n = 100
+print(len(str(n))) # strに変換する必要あり
+# 3
+```
+
 ### 素因数分解
 
 ```python
