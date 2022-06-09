@@ -87,6 +87,37 @@ print(data)
 # [[10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10]]
 ```
 
+### indexの指定で，配列から要素を削除（抽出）
+
+```python
+list = ['test', 'user', 'password']
+pop_word = list.pop(0) # 0: 先頭, -1: 末尾
+
+print(pop_word)
+# test
+
+print(list)
+# ['user', 'password']
+```
+
+### max(), min() *配列以外も可
+
+```python
+print(max([10, 20, 30, 20, 50, 30])) # 配列
+# 50
+print(max(100, 20)) # カンマ区切り
+# 100
+print(max('A', 'B', 'C', 'D', 'E', 'F')) # 文字列
+# F
+
+print(min([10, 20, 30, 20, 50, 30]))
+# 10
+print(min(100, 20))
+# 20
+print(min('A', 'B', 'C', 'D', 'E', 'F'))
+# A
+```
+
 ### リスト内を昇順
 
 ```python
@@ -107,16 +138,6 @@ print(list)
 # [5, 4, 3, 2, 1]
 ```
 
-### 2つのリストに重複する要素を抽出
-
-```python
-l1 = [1, 2, 3, 4]
-l2 = [3, 4, 5, 6]
-s1 = set(l1) # &はリスト・タプルに実装されていないため，setオブジェクトに一度変換する
-s2 = set(l2)
-print(s1 & s2)  #=> {3, 4}
-```
-
 - https://maku77.github.io/python/list/overlapped.html
 
 ### 多次元配列をソートする（複数キー可能）
@@ -134,6 +155,16 @@ print(sorted_data)
 ```
 
 - https://qiita.com/t_kanno/items/13dd226e70d080159d97
+
+### 2つのリストに重複する要素を抽出
+
+```python
+l1 = [1, 2, 3, 4]
+l2 = [3, 4, 5, 6]
+s1 = set(l1) # &はリスト・タプルに実装されていないため，setオブジェクトに一度変換する
+s2 = set(l2)
+print(s1 & s2)  #=> {3, 4}
+```
 
 ## 文字列
 
