@@ -19,6 +19,26 @@ print(a)
 # [3, 11, 18, 25, 40, 58, 69, 81, 88, 99]
 ```
 
+- ループ&可変長
+
+```python
+k = [None] * m
+for i in range(m):
+  k[i] = list(map(int, input().split()))
+```
+
+- i=0とそれ以外の要素に分けてリストに格納したい場合
+
+```python
+n, m = map(int, input().split()) # mを使っているため，一応記載
+k = []
+s = []
+for _ in range(m):
+  tmp = list(map(int, input().split()))
+  k.append(tmp[0])  # i=0の値のみappend
+  s.append(tmp[1:]) # i=1以降を配列にまとめてappend
+```
+
 
 ## 標準出力
 
@@ -247,4 +267,25 @@ def divisor(n):
   table = list(set(table)) # set(): 重複取り除き，set(集合) に変換
   table.sort()
   return table
+```
+
+## ビット演算
+
+### サンプルコード
+
+```python
+# ビット探索のサンプルコード: https://amateur-engineer-blog.com/bit-search/
+n = 3
+patterns = []
+for i in range(2**n):
+  p = [0] * n
+  for j in range(n):
+    print(i, j)
+    print(i >> j) # j=1の場合i/2，j=2の場合，i/2*2
+    if i >> j & 1:
+      p[j] = 1
+  patterns.append(p)
+
+print(patterns)
+# [[0, 0, 0], [1, 0, 0], [0, 1, 0], [1, 1, 0], [0, 0, 1], [1, 0, 1], [0, 1, 1], [1, 1, 1]]
 ```
